@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+//#include <stdio.h>
+//#include <string.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -18,20 +20,35 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	src_len;
 	size_t	i;
 
-	if (!dest || !src)
-		return (0);
-	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	if (size == 0)
 		return (src_len);
+	dest_len = ft_strlen(dest);
 	if (size <= dest_len)
 		return ((size + src_len));
 	i = 0;
-	while (src[i] && (i + dest_len) < size - 1)
+	while (src[i] && (dest_len + i) < size - 1)
 	{
 		dest[dest_len + i] = src[i];
 		i++;
 	}
 	dest[dest_len + i] = '\0';
-	return (ft_strlen(dest));
+	return (dest_len + src_len);
 }
+
+/*int	main(void)
+{
+	char	dest[50] = "je suis un gentil";
+	char	src[50] = "monsieur sympathique";
+
+	printf("dest initial = %s\n", dest);
+	printf("src initial = %s\n", src);
+
+	unsigned int	result = ft_strlcat(dest, src, 48);
+
+	printf("dest strlcat = %s\n", dest);
+	printf("src strlcat = %s\n", src);
+	printf("longueur = %d\n", result);
+
+	return(0);
+}*/
