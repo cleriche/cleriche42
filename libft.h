@@ -6,7 +6,7 @@
 /*   By: cleriche <cleriche@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:27:39 by cleriche          #+#    #+#             */
-/*   Updated: 2024/11/07 16:24:05 by cleriche         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:29:06 by cleriche         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size); // ajoute str src a
 /* fonctions de controle de chaines */
 char	*ft_strchr(const char *s, int c); // cherche 1ere itertion de c dans s
 char	*ft_strrchr(const char *s, int c); // cherche derniere iteration de c dans s
-char	*ft_strncmp(const char *s1, const char *s2, size_t n); // compare chaines sur n char
+int		*ft_strncmp(const char *s1, const char *s2, size_t n); // compare chaines sur n char
 
 /* fonctions de manipulation de memoire */
 void	*ft_memset(void *ptr, int value, size_t n); /* remplir memoire avec octet defini*/
