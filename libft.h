@@ -32,7 +32,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size); // ajoute str src a
 /* fonctions de controle de chaines */
 char	*ft_strchr(const char *s, int c); // cherche 1ere itertion de c dans s
 char	*ft_strrchr(const char *s, int c); // cherche derniere iteration de c dans s
-int		*ft_strncmp(const char *s1, const char *s2, size_t n); // compare chaines sur n char
+int		ft_strncmp(const char *s1, const char *s2, size_t n); // compare chaines sur n char
 
 /* fonctions de manipulation de memoire */
 void	*ft_memset(void *ptr, int value, size_t n); /* remplir memoire avec octet defini*/
